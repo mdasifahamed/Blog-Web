@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+<h1>HOME</h1>
+<p> <%=StartingContent %> </p>
+<%  postsT.forEach(function(posts){%>
+  <h1> <%= posts.Tittle %></h1> %>
+  <p> <%=  posts.Body %> </p>
+ <%  });  %>
+<%- include('partials/footer'); -%>
+
+<%# postsT.forEach(function(post){
+  console.log(post.Tittle);
+});
+for(var i = 0; i< postsT.length; i++ )
+console.log(postsT[i].Tittle); %>
