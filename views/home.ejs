@@ -3,6 +3,8 @@
 <p> <%=StartingContent %> </p>
 <%  postsT.forEach(function(posts){%>
   <h1> <%= posts.Tittle %></h1> %>
-  <p> <%=  posts.Body %> </p>
+  <p> <%=  posts.Body.substring(0,100)  +" ..." %>
+  <a href="/posts/<%=posts.Tittle %>">Read More</a> </p>
+
  <%  });  %>
 <%- include('partials/footer'); -%>
