@@ -60,9 +60,12 @@ app.get("/posts/:topic", function(req, res){
       posts.forEach(function(post){
           const storedtittle = lodash.lowerCase(post.Tittle);
           if (storedtittle === requestedTittle){
-                console.log("Match Found");
+                res.render('post',
+                {tittle:post.Tittle,
+                  body: post.Body
+                })
             } else {
-              console.log("Invalid URL");
+              res.rediret("/")
              }
 
         })
